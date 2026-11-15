@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Anime X</title>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f4fb;--card:#fff;--ink:#14131f;--mut:#5e5b70;--ac:#3b4cff;--on:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10101a;--card:#1b1a29;--ink:#eeedf8;--mut:#a4a1b8;--ac:#8793ff;--on:#10101a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#10101a;--card:#1b1a29;--ink:#eeedf8;--mut:#a4a1b8;--ac:#8793ff;--on:#10101a;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:12;background:var(--bg)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--bg);border-bottom:2px solid var(--ink);padding:12px 16px 0}
+.top{display:flex;align-items:center;gap:14px;max-width:1000px;margin:auto}
+h1{margin:0;font:26px/1 "Dela Gothic One",Impact,"Arial Black",sans-serif;white-space:nowrap}
+h1 span{color:var(--ac);display:inline-block;transform:skewX(-8deg) scale(1.25);margin-left:3px}
+#q{flex:1;min-width:0;border:2px solid var(--ink);background:var(--card);color:var(--ink);padding:8px 12px;font:inherit}
+nav{display:flex;gap:4px;max-width:1000px;margin:10px auto 0;overflow-x:auto}
+nav button{all:unset;cursor:pointer;padding:8px 12px;font-weight:600;color:var(--mut);border-bottom:4px solid transparent;white-space:nowrap}
+nav button.on{color:var(--ink);border-bottom-color:var(--ac)}
+button:focus-visible,input:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:20px;padding:20px 16px 24px;max-width:1000px;margin:auto}
+.c{all:unset;cursor:pointer;display:block;position:relative;border:2px solid var(--ink);background:var(--card);box-shadow:5px 5px 0 var(--ink);transition:transform .12s,box-shadow .12s;color:var(--ink)}
+.c:active{transform:translate(4px,4px);box-shadow:1px 1px 0 var(--ink)}
+.c:focus-visible{outline:3px solid var(--ac);outline-offset:4px}
+.cv{aspect-ratio:2/3;display:flex;align-items:flex-end;justify-content:space-between;padding:10px;color:#fff;border-bottom:2px solid var(--ink);background:radial-gradient(circle at 1px 1px,rgba(0,0,0,.22) 1.3px,transparent 1.7px) 0 0/7px 7px,linear-gradient(160deg,hsl(var(--h) 85% 60%),hsl(calc(var(--h) + 35) 75% 38%))}
+.cv b{font:var(--fs,19px)/1.05 "Dela Gothic One",Impact,sans-serif;text-shadow:2px 2px 0 rgba(0,0,0,.35);overflow-wrap:anywhere;max-width:100%}
+.cv i{font-style:normal;font-size:12px;font-weight:700;background:var(--ink);color:var(--bg);padding:2px 7px}
+.ct{padding:9px 10px 10px}
+.ct strong{display:block;line-height:1.25}
+.ct small{display:block;color:var(--mut);font-size:12.5px}
+.hrt{position:absolute;top:6px;right:8px;color:#fff;font-size:20px;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.em{grid-column:1/-1;text-align:center;color:var(--mut);padding:40px 0}
+.ft{max-width:640px;margin:0 auto;padding:0 16px 32px;text-align:center;color:var(--mut);font-size:13px}
+#m{position:fixed;inset:0;z-index:20;background:rgba(10,10,20,.6);display:flex;align-items:flex-end;justify-content:center}
+#m[hidden]{display:none}
+.sh{position:relative;width:100%;max-width:560px;max-height:90%;overflow:auto;background:var(--card);border:2px solid var(--ink);border-bottom:0;padding:20px 18px calc(20px + env(safe-area-inset-bottom,0px))}
+.sh h2{margin:0 36px 2px 0;font:22px/1.2 "Dela Gothic One",Impact,sans-serif}
+.sh h3{margin:20px 0 8px;font-size:16px}
+.x{all:unset;cursor:pointer;position:absolute;top:12px;right:14px;width:32px;height:32px;text-align:center;line-height:32px;border:2px solid var(--ink)}
+.mu{color:var(--mut);margin:0 0 10px;font-size:13.5px}
+.row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:14px 0}
+.st{all:unset;cursor:pointer;font-size:28px;line-height:1;color:var(--mut);opacity:.45;padding:2px}
+.st.on{color:var(--ac);opacity:1}
+.b{all:unset;cursor:pointer;background:var(--ink);color:var(--bg);padding:8px 14px;font-weight:700}
+.cf{display:flex;gap:8px}
+.cf input{flex:1;min-width:0;border:2px solid var(--ink);background:var(--bg);color:var(--ink);padding:8px 10px;font:inherit}
+.cm{border-left:4px solid var(--ac);padding:2px 0 2px 10px;margin:12px 0}
+.cm small{color:var(--mut)}
+.cm p{margin:2px 0 0;overflow-wrap:anywhere}
+.sc{grid-column:1/-1;display:grid;gap:16px}
+.dy{border:2px solid var(--ink);background:var(--card)}
+.dy h2{margin:0;padding:8px 12px;font:17px/1.2 "Dela Gothic One",Impact,sans-serif;border-bottom:2px solid var(--ink);display:flex;justify-content:space-between;gap:8px}
+.dy h2 small{font:600 13px system-ui,sans-serif}
+.dy.hj{border-color:var(--ac);box-shadow:5px 5px 0 var(--ac)}
+.dy.hj h2{background:var(--ac);color:var(--on);border-color:var(--ac)}
+.it{all:unset;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;box-sizing:border-box;padding:9px 12px;border-bottom:1px solid var(--bg)}
+.it:last-child{border-bottom:0}
+.it.fo{font-weight:700}
+.it small{color:var(--mut);font-size:12.5px;font-weight:400;white-space:nowrap}
+.nt{color:var(--mut);font-size:13px;margin:0}
+.cv{flex-direction:column;align-items:flex-start;gap:6px}
+.cv i{order:-1}
+.th{flex:none;width:44px;display:block}
+.th .cv{--fs:8px;padding:5px;gap:3px;border:2px solid var(--ink)}
+.th .cv b{text-shadow:1px 1px 0 rgba(0,0,0,.4)}
+.th .cv i{display:none}
+.tt{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px;text-align:left}
+.it .tt small{white-space:normal}
+.hero{display:flex;gap:14px;overflow-x:auto;padding:4px 4px 16px;margin:0 -4px;scroll-snap-type:x proximity}
+.hc{all:unset;cursor:pointer;flex:none;width:128px;scroll-snap-align:start;display:flex;flex-direction:column;gap:8px;font-weight:700;font-size:13px;line-height:1.25;color:var(--ink)}
+.hc .cv{--fs:16px;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink)}
+.hc:active .cv{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+.mh{display:flex;gap:14px;align-items:flex-start;margin-right:36px}
+.mh .cv{--fs:11px;width:84px;flex:none;border:2px solid var(--ink)}
+.mh h2{margin:0}
+.wh{display:flex;gap:8px;flex-wrap:wrap}
+.wh a{border:2px solid var(--ink);color:var(--ink);padding:7px 12px;font-weight:700;text-decoration:none}
+.wh a:hover{background:var(--ink);color:var(--bg)}
+.pv{aspect-ratio:16/9;background:#000;border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;font-size:13px;padding:10px;margin:0 0 10px}
+.pv video,.pv iframe{width:100%;height:100%;border:0;background:#000}
+.el{display:grid;grid-template-columns:repeat(auto-fill,minmax(52px,1fr));gap:6px;max-height:190px;overflow:auto;padding:2px}
+.ep{all:unset;cursor:pointer;text-align:center;border:2px solid var(--ink);padding:6px 0;font-weight:700;font-size:13px}
+.ep.v{color:var(--mut);text-decoration:line-through}
+.ep.on{background:var(--ac);color:var(--on);border-color:var(--ac);text-decoration:none}
+.sf{display:flex;gap:8px;margin-top:10px}
+.sf input{flex:1;min-width:0;border:2px solid var(--ink);background:var(--bg);color:var(--ink);padding:8px 10px;font:inherit;font-size:13px}
+</style>
+</head>
+<body>
+<header>
+  <div class="top"><h1>Anime<span>X</span></h1><input id="q" type="search" placeholder="Buscar título ou gênero" aria-label="Buscar"></div>
+  <nav id="nv"></nav>
+</header>
+<main class="g" id="g"></main>
+<p class="ft">O Anime X não hospeda vídeos. O player toca o endereço de vídeo que você configurar ou arquivos do seu aparelho. Use só fontes que você tem direito de assistir; para mangás e outras opções, use as plataformas oficiais.</p>
+<div id="m" hidden></div>
+<script>
+var D=[
+{id:1,t:"anime",n:"Dandadan",y:2024,g:"Ação e comédia",h:330,s:"Uma garota que acredita em fantasmas e um garoto que só crê em alienígenas se veem no meio de ameaças dos dois mundos."},
+{id:2,t:"anime",n:"Solo Leveling",y:2024,g:"Ação",h:255,s:"Em um mundo com portais e monstros, o caçador mais fraco ganha um poder único: subir de nível sem parar."},
+{id:3,t:"anime",n:"Frieren",y:2023,g:"Fantasia",h:170,s:"Depois de derrotar o rei demônio, uma elfa que vive séculos percebe tarde o quanto os amigos humanos importavam e parte para entendê-los."},
+{id:4,t:"anime",n:"Spy x Family",y:2022,g:"Comédia",h:30,s:"Um espião, uma assassina e uma menina telepata formam uma família de fachada, e cada um esconde seu segredo dos outros."},
+{id:5,t:"anime",n:"Jujutsu Kaisen",y:2020,g:"Sobrenatural",h:280,s:"Um estudante engole um objeto amaldiçoado e entra para uma escola de feiticeiros que combatem maldições."},
+{id:6,t:"anime",n:"Fullmetal Alchemist: Brotherhood",y:2009,g:"Aventura",h:10,s:"Dois irmãos alquimistas pagam um preço terrível ao tentar trazer a mãe de volta e partem em busca da Pedra Filosofal."},
+{id:7,t:"manga",n:"Kaiju No. 8",y:2020,g:"Ação",h:140,s:"Um homem de 32 anos que limpa restos de monstros ganha o poder de virar um deles e esconde isso enquanto tenta entrar na força de defesa."},
+{id:8,t:"manga",n:"Blue Lock",y:2018,g:"Esporte",h:215,s:"Um programa de treinamento reúne atacantes do Japão para formar o melhor centroavante do mundo, e só um sai vencedor."},
+{id:9,t:"manga",n:"Dr. Stone",y:2017,g:"Ficção científica",h:100,s:"Milênios depois de a humanidade virar pedra, um gênio da ciência acorda e decide reconstruir a civilização do zero."},
+{id:10,t:"manga",n:"Witch Hat Atelier",y:2016,g:"Fantasia",h:300,s:"Coco sempre sonhou em ser bruxa e descobre que a magia se aprende desenhando símbolos, um segredo que muda sua vida."},
+{id:11,t:"manga",n:"Vinland Saga",y:2005,g:"Histórico",h:45,s:"Na era dos vikings, um jovem guerreiro busca vingança e aos poucos questiona o que significa ser forte."},
+{id:12,t:"manga",n:"Monster",y:1994,g:"Suspense",h:0,s:"Um neurocirurgião salva a vida de um menino e, anos depois, precisa enfrentar o que ele se tornou."}
+];
+var S={fav:[],rate:{},cm:{},fol:[],seen:{},src:{}},tab="ep",q="",cur=null,curT=null;
+try{var raw=localStorage.getItem("animex");if(raw){var p=JSON.parse(raw);S.fav=p.fav||[];S.rate=p.rate||{};S.cm=p.cm||{};S.fol=p.fol||[];S.seen=p.seen||{};S.src=p.src||{}}}catch(e){}
+function save(){try{localStorage.setItem("animex",JSON.stringify(S))}catch(e){}}
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function $(s){return document.querySelector(s)}
+function hs(s){var h=0;for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))>>>0;return h}
+function abbr(n){return n.replace(/^(The|A|An) /,"").replace(/[:–(].*$/,"").replace(/ Season \d+$/,"").trim().split(" ").slice(0,3).join(" ")}
+function cov(n,t,h0){
+  var x=hs(n),h=h0!=null?h0:x%360,p=x%4,o="rgba(255,255,255,.16)",bg;
+  if(p==0)bg="repeating-conic-gradient(from "+(x%60)+"deg at 70% 30%,"+o+" 0 8deg,transparent 8deg 16deg)";
+  else if(p==1)bg="repeating-radial-gradient(circle at 30% 70%,"+o+" 0 10px,transparent 10px 22px)";
+  else if(p==2)bg="repeating-linear-gradient("+(x%90)+"deg,"+o+" 0 12px,transparent 12px 26px)";
+  else bg="radial-gradient(circle at 1px 1px,rgba(0,0,0,.25) 1.3px,transparent 1.7px) 0 0/7px 7px";
+  return '<div class="cv" style="background:'+bg+',linear-gradient(160deg,hsl('+h+' 85% 58%),hsl('+((h+40)%360)+' 75% 36%))"><b>'+esc(abbr(n))+'</b>'+(t?'<i>'+t+'</i>':'')+'</div>';
+}
+function where(n,t){
+  var e=encodeURIComponent(n),a=' target="_blank" rel="noopener"';
+  return '<h3>'+(t=="manga"?"Onde ler":"Onde assistir")+'</h3><div class="wh">'+(t=="manga"?'<a href="https://mangaplus.shueisha.co.jp/"'+a+'>MANGA Plus</a>':'<a href="https://www.crunchyroll.com/search?q='+e+'"'+a+'>Crunchyroll</a><a href="https://www.netflix.com/search?q='+e+'"'+a+'>Netflix</a>')+'</div><p class="mu" style="margin-top:8px">Os links abrem a busca nas plataformas oficiais. A disponibilidade no Brasil varia.</p>';
+}
+var EC={"Dandadan":24,"Solo Leveling":25,"Frieren":28,"Spy x Family":37,"Jujutsu Kaisen":59,"Fullmetal Alchemist: Brotherhood":64};
+var SRC={};
+/*AUTO:START*/var AUTO={};var AUTO_TS="";/*AUTO:END*/
+function nx(n){var a=AUTO[n],h="";if(a&&a.next)h+=" Próximo episódio: "+a.next.ep+", "+new Date(a.next.at*1000).toLocaleString("pt-BR",{dateStyle:"short",timeStyle:"short"})+".";if(AUTO_TS)h+=" Dados de "+new Date(AUTO_TS).toLocaleString("pt-BR",{dateStyle:"short",timeStyle:"short"})+".";return h}
+var pl={n:null,e:0,u:null};
+function eps(n){return (AUTO[n]&&AUTO[n].total)||EC[n]||12}
+function tpl(n){return S.src[n]||SRC[n]||""}
+function url(n,e){var t=tpl(n);return t?t.replace(/\{n\}/g,e):""}
+function player(n){
+  var t=eps(n),on=pl.n==n&&pl.e,u=on?(pl.u||url(n,pl.e)):"",v=S.seen[n]||0,h='<h3>Assistir no Anime X</h3><div class="pv">';
+  if(on&&u){h+=/\.(mp4|webm|ogg|m3u8)([?#]|$)/i.test(u)||pl.u?'<video src="'+esc(u)+'" controls autoplay playsinline></video>':'<iframe src="'+esc(u)+'" allowfullscreen allow="autoplay; fullscreen"></iframe>'}
+  else h+=on?'Episódio '+pl.e+': nenhuma fonte de vídeo definida. Cole o endereço abaixo ou abra um arquivo do seu aparelho.':'Escolha um episódio para assistir aqui mesmo.';
+  h+='</div><div class="el">';
+  for(var i=1;i<=t;i++)h+='<button class="ep'+(on&&pl.e==i?' on':i<=v?' v':'')+'" data-p="'+i+'" data-n="'+esc(n)+'">'+i+'</button>';
+  return h+'</div><p class="mu" style="margin-top:6px">'+t+' episódios. Riscados: já vistos.'+nx(n)+'</p><div class="sf"><input id="si" data-n="'+esc(n)+'" value="'+esc(tpl(n))+'" placeholder="https://seusite/ep{n}.mp4  ({n} = nº do episódio)"><button class="b" data-a="src">Salvar</button></div><div class="sf"><label class="b">Abrir arquivo do aparelho<input id="lf" type="file" accept="video/*" hidden></label></div>';
+}
+function reopen(n){var d=D.filter(function(x){return x.n==n})[0];if(d)modal(d.id);else modalT(n)}
+function modalT(n){
+  curT=n;cur=null;var f=S.fol.indexOf(n)>=0,days=[];
+  SCH.forEach(function(l,i){if(l.indexOf(n)>=0)days.push(DN[i])});
+  $("#m").innerHTML='<div class="sh" role="dialog" aria-label="'+esc(n)+'"><button class="x" data-a="close" aria-label="Fechar">✕</button><div class="mh">'+cov(n,"")+'<div><h2>'+esc(n)+'</h2><p class="mu">Episódio novo: '+days.join(", ")+'</p></div></div>'+player(n)+where(n,"anime")+'<div class="row"><span>Você viu até o episódio <b>'+(S.seen[n]||0)+'</b></span><span><button class="b" data-e="-1" aria-label="Menos um episódio">−</button> <button class="b" data-e="1" aria-label="Mais um episódio">+</button></span></div><button class="b" data-f="'+esc(n)+'">'+(f?"★ Seguindo":"☆ Seguir")+'</button></div>';
+  $("#m").hidden=false;
+}
+var DN=["Domingo","Segunda","Terça","Quarta","Quinta","Sexta","Sábado"];
+var SCH=[
+["Blue Box Season 2","Aoashi Season 2","Mission: Yozakura Family","Dragon Ball Super: Beerus","Overgeared"],
+["PSYREN","Hello, I Am a Witch and My Crush Wants Me to Make a Love Potion!","Magical Girl Raising Project: Restart"],
+["Super Psychic Policeman Chojo","The Cold Sato-san Is Only Sweet to Me","The Laid-Off Cheat-Granting Mage Enjoys a Second Lease on Life","Chitose Is in the Ramune Bottle"],
+["Magic Knight Rayearth (2026)","Dandivine","A Returner’s Magic Should Be Special Season 2"],
+["The Ramparts of Ice Season 2","FX Fighter Kurumi-chan","The Exiled Heavy Knight Knows How to Game the System"],
+["The Apothecary Diaries Season 3","Tokyo Revengers: War of the Three Titans Arc","Firefly Wedding","Tougen Anki"],
+["Black Clover Season 2","Bleach: Thousand-Year Blood War – The Calamity","Ranma ½ Season 3","The Vermilion Mask","#I’m Looking for a Zombie","Detective Conan"]
+];
+var UP=[["Witch on the Holy Night","Filme","20/11"],["Fool Night","ONA","26/11"],["Takopi’s Original Sin: Thank You, See You Tomorrow","Filme","27/11"],["Disney Twisted-Wonderland: Episode of Savanaclaw","ONA","1/12"]];
+function sched(){
+  var t=new Date().getDay(),td=SCH[t],fc=td.filter(function(x){return S.fol.indexOf(x)>=0}).length,h="";
+  for(var i=0;i<7;i++){
+    var d=(t+i)%7,L=SCH[d].filter(function(x){return !q||x.toLowerCase().indexOf(q)>=0});
+    if(!L.length)continue;
+    h+='<section class="dy'+(i==0?" hj":"")+'"><h2>'+DN[d]+'<small>'+(i==0?"Hoje":i==1?"Amanhã":"")+'</small></h2>'+L.map(function(x){var f=S.fol.indexOf(x)>=0;return '<button class="it'+(f?" fo":"")+'" data-w="'+esc(x)+'"><span class="th">'+cov(x,"")+'</span><span class="tt">'+esc(x)+'<small>'+(f?"★ Seguindo":"Toque para assistir")+'</small></span></button>'}).join("")+'</section>';
+  }
+  if(!h)return '<p class="em">Nenhum título encontrado.</p>';
+  return '<div class="sc"><p class="nt"><b>Hoje ('+DN[t]+'):</b> '+td.length+' títulos com episódio novo'+(S.fol.length?", "+fc+" dos que você segue":"")+'. Toque em um título para abrir.</p><div class="hero">'+td.map(function(x){return '<button class="hc" data-w="'+esc(x)+'">'+cov(x,"Hoje")+'<span>'+esc(x)+'</span></button>'}).join("")+'</div>'+h+'<section class="dy"><h2>Estreias a caminho</h2>'+UP.map(function(u){return '<div class="it" style="cursor:default"><span>'+esc(u[0])+'</span><small>'+u[1]+", "+u[2]+'</small></div>'}).join("")+'</section><p class="nt">Lista da temporada de outono de 2026, conferida em 15/11/2026. Os dias seguem a exibição original e podem variar conforme a plataforma e o fuso horário. Títulos podem entrar em pausa.</p></div>';
+}
+var TABS=[["ep","Novos episódios"],["new","Recentes"],["anime","Animes"],["manga","Mangás"],["fav","Favoritos"]];
+function nav(){$("#nv").innerHTML=TABS.map(function(t){return '<button data-t="'+t[0]+'" class="'+(tab==t[0]?"on":"")+'">'+t[1]+(t[0]=="fav"&&S.fav.length?" ("+S.fav.length+")":"")+'</button>'}).join("")}
+function grid(){
+  if(tab=="ep"){$("#g").innerHTML=sched();nav();return}
+  var L=D.filter(function(d){
+    if(tab=="anime"||tab=="manga")if(d.t!=tab)return false;
+    if(tab=="fav"&&S.fav.indexOf(d.id)<0)return false;
+    var k=(d.n+" "+d.g).toLowerCase();return !q||k.indexOf(q)>=0});
+  if(tab=="new")L.sort(function(a,b){return b.y-a.y});
+  $("#g").innerHTML=L.length?L.map(function(d){var r=S.rate[d.id];
+    return '<button class="c" data-id="'+d.id+'">'+cov(d.n,d.t=="anime"?"Anime":"Mangá",d.h)+''+(S.fav.indexOf(d.id)>=0?'<span class="hrt">♥</span>':'')+'<div class="ct"><strong>'+esc(d.n)+'</strong><small>'+d.y+'</small><small>'+esc(d.g)+'</small><small>'+(r?"Sua nota: "+"★".repeat(r):"Sem nota")+'</small></div></button>'}).join(""):
+    '<p class="em">'+(tab=="fav"&&!q?"Nenhum favorito ainda. Abra um título e toque em Favoritar.":"Nenhum título encontrado.")+'</p>';
+  nav();
+}
+function modal(id){
+  cur=id;var d=D.filter(function(x){return x.id==id})[0],r=S.rate[id]||0,f=S.fav.indexOf(id)>=0,c=S.cm[id]||[];
+  var st="";for(var i=1;i<=5;i++)st+='<button class="st'+(i<=r?" on":"")+'" data-r="'+i+'" aria-label="Nota '+i+'">★</button>';
+  $("#m").innerHTML='<div class="sh" role="dialog" aria-label="'+esc(d.n)+'"><button class="x" data-a="close" aria-label="Fechar">✕</button><div class="mh">'+cov(d.n,"",d.h)+'<div><h2>'+esc(d.n)+'</h2><p class="mu">'+(d.t=="anime"?"Anime":"Mangá")+", "+d.y+", "+esc(d.g)+'</p></div></div><p>'+esc(d.s)+'</p>'+(d.t=="anime"?player(d.n):"")+'<div class="row"><span>'+st+'</span><button class="b" data-a="fav">'+(f?"♥ Salvo nos favoritos":"♡ Favoritar")+'</button></div>'+where(d.n,d.t)+'<h3>Comunidade</h3><div class="cf"><input id="ci" maxlength="300" placeholder="Escreva um comentário"><button class="b" data-a="cm">Enviar</button></div>'+
+    (c.length?c.map(function(x){return '<div class="cm"><small>'+esc(x.d)+'</small><p>'+esc(x.t)+'</p></div>'}).join(""):'<p class="mu" style="margin-top:12px">Seja o primeiro a comentar. Os comentários ficam salvos só neste aparelho.</p>')+'</div>';
+  $("#m").hidden=false;
+}
+function close(){$("#m").hidden=true;cur=null;curT=null;pl={n:null,e:0,u:null};$("#m").innerHTML=""}
+document.addEventListener("click",function(e){
+  var b=e.target.closest("[data-id],[data-t],[data-r],[data-a],[data-f],[data-w],[data-e],[data-p]");
+  if(!b){if(e.target.id=="m")close();return}
+  var a=b.dataset;
+  if(a.p){pl={n:a.n,e:+a.p,u:null};S.seen[a.n]=Math.max(S.seen[a.n]||0,+a.p);save();reopen(a.n)}
+  else if(a.a=="src"){var si=$("#si"),nn=si.dataset.n,vv=si.value.trim();if(vv)S.src[nn]=vv;else delete S.src[nn];save();reopen(nn)}
+  else if(a.id){modal(+a.id)}
+  else if(a.w!==undefined){modalT(a.w)}
+  else if(a.e){S.seen[curT]=Math.max(0,(S.seen[curT]||0)+(+a.e));save();modalT(curT)}
+  else if(a.f!==undefined){var j=S.fol.indexOf(a.f);if(j<0)S.fol.push(a.f);else S.fol.splice(j,1);save();grid();if(curT)modalT(curT)}
+  else if(a.t){tab=a.t;grid()}
+  else if(a.r){S.rate[cur]=S.rate[cur]==+a.r?0:+a.r;save();modal(cur);grid()}
+  else if(a.a=="close")close();
+  else if(a.a=="fav"){var i=S.fav.indexOf(cur);if(i<0)S.fav.push(cur);else S.fav.splice(i,1);save();modal(cur);grid()}
+  else if(a.a=="cm"){var v=$("#ci").value.trim();if(!v)return;(S.cm[cur]=S.cm[cur]||[]).unshift({t:v,d:"Você, "+new Date().toLocaleDateString("pt-BR")});save();modal(cur)}
+});
+document.addEventListener("change",function(e){
+  if(e.target.id=="lf"&&e.target.files[0]){var n=pl.n||curT||(D.filter(function(x){return x.id==cur})[0]||{}).n;pl={n:n,e:pl.n==n&&pl.e?pl.e:1,u:URL.createObjectURL(e.target.files[0])};reopen(n)}
+});
+document.addEventListener("keydown",function(e){
+  if(e.key=="Escape"&&(cur||curT))close();
+  if(e.key=="Enter"&&e.target.id=="ci")document.querySelector('[data-a="cm"]').click();
+});
+$("#q").addEventListener("input",function(e){q=e.target.value.trim().toLowerCase();grid()});
+grid();
+</script>
+</body>
+</html>
